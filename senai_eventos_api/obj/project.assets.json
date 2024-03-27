@@ -2203,7 +2203,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Arthur.Vaz\\.nuget\\packages\\": {}
+    "C:\\Users\\Maria.Fiori\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -2211,11 +2211,11 @@
       "projectUniqueName": "C:\\Projetos\\Eventos_senai\\senai_eventos_api\\senai_eventos_api.csproj",
       "projectName": "senai_eventos_api",
       "projectPath": "C:\\Projetos\\Eventos_senai\\senai_eventos_api\\senai_eventos_api.csproj",
-      "packagesPath": "C:\\Users\\Arthur.Vaz\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Maria.Fiori\\.nuget\\packages\\",
       "outputPath": "C:\\Projetos\\Eventos_senai\\senai_eventos_api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Arthur.Vaz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Maria.Fiori\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
