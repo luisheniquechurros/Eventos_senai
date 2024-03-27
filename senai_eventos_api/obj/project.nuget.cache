@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Jmx16VZWq99GXYgmE1XuFD0LwsUdQPuznauknj4zJXRih2XEBFRl0PWzm2PjDEJgABczX2xKFuA+1Jx4+vKLOg==",
+  "success": true,
+  "projectFilePath": "C:\\Projetos\\api\\senai_eventos_api\\senai_eventos_api\\senai_eventos_api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Luis Henrique\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Luis Henrique\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Luis Henrique\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\Luis Henrique\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\Luis Henrique\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\Luis Henrique\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
