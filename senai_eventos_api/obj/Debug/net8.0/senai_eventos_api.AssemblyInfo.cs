@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("senai_eventos_api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0f705a2d4fa111b28643a15802c55ac9829d8b9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+945523696dae42c519bc1db3b0603f220dcb461b")]
 [assembly: System.Reflection.AssemblyProductAttribute("senai_eventos_api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("senai_eventos_api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

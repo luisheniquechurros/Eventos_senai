@@ -2203,19 +2203,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Maria.Fiori\\.nuget\\packages\\": {}
+    "C:\\Users\\Cecília.Queiroz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\Eventos_senai\\senai_eventos_api\\senai_eventos_api.csproj",
+      "projectUniqueName": "C:\\projetos\\Eventos_senai\\senai_eventos_api\\senai_eventos_api.csproj",
       "projectName": "senai_eventos_api",
-      "projectPath": "C:\\Projetos\\Eventos_senai\\senai_eventos_api\\senai_eventos_api.csproj",
-      "packagesPath": "C:\\Users\\Maria.Fiori\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\Eventos_senai\\senai_eventos_api\\obj\\",
+      "projectPath": "C:\\projetos\\Eventos_senai\\senai_eventos_api\\senai_eventos_api.csproj",
+      "packagesPath": "C:\\Users\\Cecília.Queiroz\\.nuget\\packages\\",
+      "outputPath": "C:\\projetos\\Eventos_senai\\senai_eventos_api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Maria.Fiori\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Cecília.Queiroz\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"

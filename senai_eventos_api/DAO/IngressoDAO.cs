@@ -8,20 +8,20 @@ using senai_eventos_api.Repository;
 
 namespace senai_eventos_api.DAO
 {
-    public class LoteDAO
+    public class IngressoDAO
     {
         private MySqlConnection _connection;
 
-        public LoteDAO()
+        public IngressoDAO()
         {
             _connection = MySqlConnectionFactory.GetConnection();
         }
 
-        public List<Lote> GetAll()
+        public List<Ingresso> GetAll()
         {
-            List<Lote> lotes = new List<Lote>();
+            List<Ingresso> ingressos = new List<Ingresso>();
 
-            string query = "SELECT * FROM bd_eventos_senai1.lote";
+            string query = "SELECT * FROM bd_eventos_senai1.ingresso";
 
             try
             {
@@ -30,15 +30,17 @@ namespace senai_eventos_api.DAO
 
                 using(MySqlDataReader reader = command.ExecuteReader())
                 {
-                    Lote lote = new Lote();
+                    Ingresso ingresso = new Ingresso();
                     while(reader.Read())
                     {
-                        lote.IdLote = reader.GetInt32("id_lote");
-                        lote.ValorUnitario = reader.GetDouble("valor_unitario");
-                        lote.QuantidadeTotal = reader.GetInt32("quantidade_total");
-                        lote.Saldo = reader.GetInt32("saldo");
+                        ingresso.IdIngresso = reader.GetInt32("id_ingresso");
+                        ingresso.Valor = reader.GetString("valor");
+                        ingresso.Status = reader.GetString("status");
+                        ingresso.Tipo = reader.GetString("tipo");
+                        ingresso.CodigoQr = reader.GetString("codigo_qr");
+                        ingresso.DataUtilizacao = reader.GetDateTime("data_utilizacao");
 
-                        lotes.Add(lote);
+                        ingressos.Add(ingresso);
                     }
                 }
             }
@@ -57,13 +59,13 @@ namespace senai_eventos_api.DAO
                 //Fecha a conexão com o banco
                 _connection.Close();
             }
-            return lotes;
+            return ingressos;
         }
 
-        public Lote GetId(int id)
+        public Ingresso GetId(int id)
         {
-            Lote lote = new Lote();
-            string query = $"SELECT * FROM bd_eventos_senai1.lote WHERE id_lote = {id}";
+            Ingresso ingresso = new Ingresso();
+            string query = $"SELECT * FROM bd_eventos_senai1.ingresso WHERE id_ingresso = {id}";
 
             try
             {
@@ -74,10 +76,12 @@ namespace senai_eventos_api.DAO
                 {
                     if(reader.Read())
                     {
-                        lote.IdLote = reader.GetInt32("id_lote");
-                        lote.ValorUnitario = reader.GetDouble("valor_unitario");
-                        lote.QuantidadeTotal = reader.GetInt32("quantidade_total");
-                        lote.Saldo = reader.GetInt32("saldo");
+                        ingresso.IdIngresso = reader.GetInt32("id_ingresso");
+                        ingresso.Valor = reader.GetString("valor");
+                        ingresso.Status = reader.GetString("status");
+                        ingresso.Tipo = reader.GetString("tipo");
+                        ingresso.CodigoQr = reader.GetString("codigo_qr");
+                        ingresso.DataUtilizacao = reader.GetDateTime("data_utilizacao");
                     }
                 }
             }
@@ -96,22 +100,24 @@ namespace senai_eventos_api.DAO
                 //Fecha a conexão com o banco
                 _connection.Close();
             }
-            return lote;
+            return ingresso;
         }
 
-        public void CriarLote(Lote lote)
+        public void CriarIngresso(Ingresso ingresso)
         {
-            string query = "INSERT INTO bd_eventos_senai1.lote (valor_unitario, quantidade_total, saldo)" +
-                            "VALUES (@ValorUnitario, @QuantidadeTotal, @Saldo)";
+            string query = "INSERT INTO bd_eventos_senai1.ingresso (valor, status, tipo, codigo_qr, data_utilizacao)" +
+                            "VALUES (@Valor, @Status, @Tipo, @CodigoQr, @DataUtilizacao)";
 
             try
             {
                 _connection.Open();
                 using(var command = new MySqlCommand(query, _connection))
                 {
-                    command.Parameters.AddWithValue("@ValorUnitario", lote.ValorUnitario);
-                    command.Parameters.AddWithValue("@QuantidadeTotal", lote.QuantidadeTotal);
-                    command.Parameters.AddWithValue("@Saldo", lote.Saldo);
+                    command.Parameters.AddWithValue("@Valor", ingresso.Valor);
+                    command.Parameters.AddWithValue("@Status", ingresso.Status);
+                    command.Parameters.AddWithValue("@Tipo", ingresso.Tipo);
+                    command.Parameters.AddWithValue("@CodigoQr", ingresso.CodigoQr);
+                    command.Parameters.AddWithValue("@DataUtilizacao", ingresso.DataUtilizacao);
                     command.ExecuteNonQuery();
                 }
             }
@@ -129,22 +135,26 @@ namespace senai_eventos_api.DAO
             }
         }
 
-        public void AtualizarLote(int id, Lote lote)
+        public void AtualizarIngresso(int id, Ingresso ingresso)
         {
-            string query = "UPDATE bd_eventos_senai1.lote SET" +
-                            "valor_unitario=@ValorUnitario, " +
-                            "quantidade_total=@QuantidadeTotal, " +
-                            "saldo=@Saldo ," +
-                            "WHERE id_lote=@id_lote";
+            string query = "UPDATE bd_eventos_senai1.ingresso SET" +
+                            "valor=@Valor, " +
+                            "status=@Status, " +
+                            "tipo=@Tipo ," +
+                            "codigo_qr=@CodigoQr ," +
+                            "data_utilizacao=@DataUtilizacao ," +
+                            "WHERE id_ingresso=@id_ingresso";
 
             try
             {
                 _connection.Open();
                 using(var command = new MySqlCommand(query, _connection))
                 {
-                    command.Parameters.AddWithValue("@ValorUnitario", lote.ValorUnitario);
-                    command.Parameters.AddWithValue("@QuntidadeTotal", lote.QuantidadeTotal);
-                    command.Parameters.AddWithValue("@Saldo", lote.Saldo);
+                    command.Parameters.AddWithValue("@Valor", ingresso.Valor);
+                    command.Parameters.AddWithValue("@Status", ingresso.Status);
+                    command.Parameters.AddWithValue("@Tipo", ingresso.Tipo);
+                    command.Parameters.AddWithValue("@CodigoQr", ingresso.CodigoQr);
+                    command.Parameters.AddWithValue("@DataUtilizacao", ingresso.DataUtilizacao);
                     command.ExecuteNonQuery();
                 }
             }
@@ -162,16 +172,16 @@ namespace senai_eventos_api.DAO
             }
         }
 
-        public void DeletarLote(int id)
+        public void DeletarIngresso(int id)
         {
-            string query = "DELETE FROM bd_eventos_senai1.lote WHERE id_lote = @id_lote";
+            string query = "DELETE FROM bd_eventos_senai1.ingresso WHERE id_ingresso = @id_ingresso";
 
             try
             {
                 _connection.Open();
                 using(var command = new MySqlCommand(query, _connection))
                 {
-                    command.Parameters.AddWithValue("@id_lote", id);
+                    command.Parameters.AddWithValue("@id_ingresso", id);
                     command.ExecuteNonQuery();
                 }
             }
