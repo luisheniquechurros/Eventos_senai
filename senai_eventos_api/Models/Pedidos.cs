@@ -17,7 +17,7 @@ namespace senai_eventos_api.Models
         public DateTime Data {get; set;}
 
         [Column("total")]
-        public int Total {get; set;}
+        public double Total {get; set;}
 
         [Column("quantidade")]
         public int Quantidade {get;set;}
@@ -26,7 +26,7 @@ namespace senai_eventos_api.Models
         public string? FormaPagamento {get;set;}
 
         [Column("status")]
-        public string? Status {get;set;}
+        public int Status {get;set;}
 
         [Column("validacao_id_usuario")]
         public int ValidacaoId {get; set;}

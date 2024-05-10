@@ -34,7 +34,7 @@ namespace senai_eventos_api.DAO
                         pedido.Total = reader.GetInt32("total");
                         pedido.Quantidade = reader.GetInt32("quantidade");
                         pedido.FormaPagamento = reader.GetString("forma_pegamento");
-                        pedido.Status = reader.GetString("status");
+                        pedido.Status = reader.GetInt32("status");
                         pedido.ValidacaoId = reader.GetInt32("validacao_id_usuario");
                         pedido.UsuarioId = reader.GetInt32("usuario_id_usuario");
                         pedidos.Add(pedido); 
@@ -75,7 +75,7 @@ namespace senai_eventos_api.DAO
                         pedidos.Total = reader.GetInt32("total");
                         pedidos.Quantidade = reader.GetInt32("quantidade");
                         pedidos.FormaPagamento = reader.GetString("forma_pagamento");
-                        pedidos.Status = reader.GetString("status");
+                        pedidos.Status = reader.GetInt32("status");
                         pedidos.ValidacaoId = reader.GetInt32("validacao_id_usuario");
                         pedidos.UsuarioId = reader.GetInt32("usuario_id_usuario");
                     }
@@ -100,7 +100,7 @@ namespace senai_eventos_api.DAO
 
         public void CriarPedido(Pedido pedidos)
         {
-            string query = "INSERT INTO pedido (Data, Total, Quantidade, FormaPagamento, Status, ValidacaoId, UsuarioId)"+
+            string query = "INSERT INTO pedido (data, total, quantidade, forma_pagamento, status, validacao_id_usuario, usuario_id_usuario)"+
                             "VALUE (@data, @total, @quantidade, @forma_pagamento, @status, @validacao_id_usuario, @usuario_id_usuario)";
 
             
@@ -136,13 +136,13 @@ namespace senai_eventos_api.DAO
         public void AtualizarPedido(int id, Pedido pedidos)
         {
             string query = "UPDATE pedidos SET "+ 
-                            "Data=@data, " +
-                            "Total=@total, " +
-                            "Quantidade=@quantidade, " +
-                            "FormaPagamento=@forma_pagamento, " +
-                            "Status=@status, " + 
-                            "ValidacaoId=@validacao_id_usuario, " +
-                            "UsuarioId=@usuario_id_usuario " + 
+                            "data=@data, " +
+                            "total=@total, " +
+                            "quantidade=@quantidade, " +
+                            "forma_pagamento=@forma_pagamento, " +
+                            "status=@status, " + 
+                            "validacao_id_usuario=@validacao_id_usuario, " +
+                            "usuario_id_usuario=@usuario_id_usuario " + 
                             "WHERE id_pedido=@id_pedido";
             
             try

@@ -1,0 +1,23 @@
+.campo_texto {
+    margin-bottom: 10px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    
+}
+input {
+    width: 55%;
+    padding: 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin: 12px;
+}
+
+.ast {
+    color: red; 
+    margin-left: 5px; 
+  }
+  

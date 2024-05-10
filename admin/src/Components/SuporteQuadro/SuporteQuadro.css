@@ -1,0 +1,184 @@
+.suportePai {
+  display: flex;
+  flex-wrap: wrap;  
+}
+
+.suporteResposta{
+  text-decoration: none;
+  color: #000;
+}
+
+.suporte-quadro {
+  width: calc(33.33% - 12px); 
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: 5px; 
+  cursor: pointer;
+  position: relative;
+  margin-top: 40px;
+  
+}
+
+.informacao {
+  text-align: left;
+  padding: 8px;
+}
+
+.image {
+  position: absolute;
+  bottom: 8px; 
+  right: 8px; 
+  margin: 8px;
+}
+
+.opcoes {
+  background-color: #fff; 
+  border: 1px solid #000000; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: absolute; 
+  left: 0; 
+  z-index: 1000; 
+  display: flex; 
+  flex-direction: column; 
+}
+
+.opcoes p {
+  padding: 8px 12px; 
+  cursor: pointer; 
+  border-bottom: 1px solid #000000; 
+}
+
+.opcoes p:last-child {
+  border-bottom: none; 
+}
+
+.opcoes p:hover {
+  background-color: #ccc; 
+}
+
+
+.selequite{
+ padding-right: 1070px;
+ padding-top: 30px;
+}
+
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 400px;
+  height: 50px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  box-shadow: 0px 2px 7px  rgba(0, 0, 0, 0.25);
+}
+
+
+option {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+option:hover {
+  background-color: #f0f0f0;
+}
+
+
+@media screen and (max-width: 932px) {
+  .suportePai {
+    display: flex;
+    flex-wrap: wrap;  
+  }
+  
+  .suporteResposta{
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .suporte-quadro {
+    width: calc(180px - 6px); 
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 3px; 
+    cursor: pointer;
+    position: relative;
+    margin-top: 20px;
+    height: 190px;
+    font-size: 12px;
+    word-wrap: break-word;
+    
+  }
+  
+  .informacao {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .image {
+    position: absolute;
+    bottom: 4px; 
+    right: 4px; 
+    margin: 4px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .opcoes {
+    background-color: #fff; 
+    border: 1px solid #000000; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    position: absolute; 
+    left: 0; 
+    z-index: 1000; 
+    display: flex; 
+    flex-direction: column; 
+  }
+  
+  .opcoes p {
+    padding: 4px 6px;
+    cursor: pointer; 
+    border-bottom: 1px solid #000000; 
+  }
+  
+  .opcoes p:last-child {
+    border-bottom: none; 
+  }
+  
+  .opcoes p:hover {
+    background-color: #ccc; 
+  }
+  
+  
+  .selequite{
+   padding-right: 90px;
+   padding-top: 15px;
+  }
+  
+  
+  select {
+    padding: 5px;
+    font-size: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+    height: 20px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    box-shadow: 0px 2px 7px  rgba(0, 0, 0, 0.25);
+  }
+  
+  option {
+    padding: 5px;
+    font-size: 8px;
+    background-color: #fff;
+  }
+  
+  option:hover {
+    background-color: #f0f0f0;
+  }
+}
