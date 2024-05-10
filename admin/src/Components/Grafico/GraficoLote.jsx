@@ -2,6 +2,26 @@ import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts';
 import Menu from '../Menu';
 
+const [lotes, setLotes] = useState([]);
+
+  useEffect(() => {
+    async function fetchLotes() {
+      try {
+        const url = 'http://localhost:5236/api/Lote/evento/1'; // Substitua 123 pelo ID do evento desejado
+        const response = await fetch(url);
+        const data = await response.json();
+        setLotes(data)
+        setQuantidadeIngressos(dataArray);
+      } catch (error) {
+        console.error('Erro ao buscar quantidade de ingressos por tipo:', error);
+      }
+    }
+
+    fetchLotes();
+
+    
+  }, []);
+
 const data = [
   { name: 'Vendidos', value: 400 },
   { name: 'Não Vendidos', value: 300 },
