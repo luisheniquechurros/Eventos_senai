@@ -1,12 +1,12 @@
-import Botaoing from '../BotaoIng/Botaoing'
+import React from 'react';
+import Botaoing from '../BotaoIng/Botaoing';
 
-const Categorias = () => {
+const Categorias = ({ onButtonClick }) => {
     return(
         <>
-            <Botaoing />
+            <Botaoing onButtonClick={onButtonClick} /> 
         </>
-        
-    )
+    );
 }
 
-export default Categorias
+export default Categorias;
